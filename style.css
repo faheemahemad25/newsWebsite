@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --primary-text-color: #183b56;
+   --secondary-text-color: #577592;
+   --accent-color: #2294ed;
+   --accent-color-dark: #1d69a3;
+   /* --padding-inline-section:20px; */
+}
+
+body{
+    /* poppins and Roboto(both 19-20 diff almost same) - both do little bit bold */
+    /* sans-serif - little bit fontSize increase */
+    font-family: "poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;  /* remove underline and all*/
+}
+
+ul {
+   list-style: none; 
+}
+
+/* ---------- Utility classes -------------- instead of give class in html and then write refre in css. now just write class attribute in html  */ 
+
+.flex{ 
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 80vw;
+    margin-inline: auto;  /* element in center*/
+    overflow: hidden;   
+    /* border: 2px solid blue; */
+}
+
+/* ---------- Utility classes -------------- */
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed; /*📗🔖 just next element means in thjis case main wiil be shown inside it or overlap. */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.companyLogo, .nav-links, .search-bar{
+    /* border: 2px solid red; */
+}
+
+.main-nav{
+    /* display: flex;    📗🔖 it still keep appling bcz of utility class.
+    align-items: center; */
+    justify-content: space-between; /*📗🔖  it alredy have flex so this is why just this property working otherwiase it works with display flex property.. */
+    padding: 3px 0px;
+}
+
+.companyLogo img{
+    width: 120px;
+    height: 70px; /* so nav height will be this much just remember.*/
+    /* mix-blend-mode: color-burn; */
+}
+
+.nav-links ul{
+    /* display: flex;       📗🔖 it still keep appling bcz of utility class.
+    align-items: center; */
+    gap: 16px;  /* 📗🔖it alredy have flex that's why gap is working. and gap property put in parent element and it give spaces to every childs */   
+}
+
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    color: var(--secondary-text-color);
+}
+.hover-link:active {
+    color: rgb(198, 1, 1);
+}
+
+.search-bar{
+/* gap: 8px; */
+height: 2rem;
+/* min-height: 2rem; ❤️ stop overflow even child is bigger than parent */
+/* overflow: hidden; */
+}
+
+.news-input{
+    height: 100%;    /* 📗🔖 takes as much ur parent have means 32px or 2rem */
+    padding: 0px 20px;
+    border-radius: 0.3rem;
+    border: none;
+    border: 2px solid var(--secondary-text-color);
+    font-family: "poppins", sans-serif;/*  bydefault form element dont take from body so we have do write specifically. */
+}
+.search-button{
+    height: 100%; /* 📗🔖 takes as much ur parent have means 32px or 2rem */
+    padding: 0px 20px;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: rgb(198, 1, 1);
+    color: white;
+    font-family: "poppins", sans-serif; /* bydefault form element dont take from body so we have do write specifically. */
+}
+.search-button:hover{
+    background-color: rgb(119, 0, 0);
+}
+
+
+/*------------------------- Section 2 ------------ main --------------------- */
+
+
+main{
+ margin-top: 100px;  /* bcz of nav is postion fixed and this just next element it is being overlap inside that. */
+}
+
+.card-container{
+    /* border: 2px solid rebeccapurple; */
+    
+    /* max-width: 80vw; 📗🔖 it still keep appling bcz of utility class
+    margin-inline: auto;  
+    overflow: hidden;  */
+
+    /* display: flex;    📗🔖 it still keep appling bcz of utility class.
+    align-items: center; */
+
+      /* justify-content: space-evenly; best work when 5 card  */
+     flex-wrap: wrap;  /*  When this property is applied, flex items will wrap to the next line when necessary, rather than overflowing or staying on a single line. */ 
+     /* flex-basis: start; */
+     row-gap: 20px;
+     column-gap: 10px;
+     /* border: 2px solid red; */
+}
+.card{
+     /* min-width: 360px; it created overflow problem insted of solve. */
+    width: 32%;
+    height: 400px;
+    box-shadow: 0 0 8px #bbd0e2;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    /* border: 1px solid black; */
+    overflow: hidden;  /* if img comes largervthan card size like card ele is 360p x but inside it img 400px it is overflowing*/
+    transition: all 0.3s ease;
+    /* margin: auto; 📗🔖 margin in right side then equal equal so it will look center in container */
+    margin-inline: auto;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #def3fd;
+    transform: translateY(-5px);
+
+}
+
+.card-header img {
+    width: 100%;  /* means we are saying to img takes as much ur parent width or 360px*/
+    height: 180px;
+    /* height: 80%; 📗🔖 height not work bcz parent dont have defined height  */
+    /* object-fit: cover;
+    object-position: center; */
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.news-source{
+    /* margin: 12px 0px;  margin-block means margin only top and bottom */
+    margin-block: 12px; /* 🔖📗 */
+}
+
+

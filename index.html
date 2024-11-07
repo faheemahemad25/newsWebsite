@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Project-12_NewsWebsite/style.css">
+    <title>News Website</title>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="main-nav flex container">
+            <a href="#" class="companyLogo" onclick="location.reload()">
+                <img src="/Project-12_NewsWebsite/assests/GSFnewsLogo.gif" alt="company logo" >
+            </a>
+            <div class="nav-links">
+                <ul class="flex" id="nav-links-input">
+                    <li class="hover-link nav-item">Cricket</li>
+                    <li class="hover-link nav-item">Finance</li>
+                    <li class="hover-link nav-item">Politics</li>
+                    <li class="hover-link nav-item">Technology</li>
+                </ul>
+            </div>
+            <div class="search-bar ">
+                <input type="text" class="news-input" placeholder="e.g Politics">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+         <div class="card-container container flex" id="card-container">
+             <!-- <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-img" class="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the title</h3>
+                    <h6 class="news-source" id="news-source">BBC News • 19/10/2024 • Sameer Abbasi </h6>
+                    <p class="new-desc" id="new-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores deleniti officia provident molestias ex sequi praesentium eos voluptatibus minima explicabo.</p>
+                </div>
+             </div>
+         </div> -->
+    </main>
+
+    <template id="newsCard-template">
+        <!-- <a href="" id="OriginalSource"> WE HAVE GIVEN id so that wil take refrence and fill put data into that--> 
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the title</h3>
+                    <h6 class="news-source" id="news-source">Al Jajera • 23/10/2024 • Kumail Ali </h6>
+                    <!-- <h6><span class="news-updateTime" id="news-updateTime">26/09/2024</span><span class="news-author" id="news-author">Author</span></h6> -->
+                    <p class="new-desc" id="new-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores deleniti officia provident molestias ex sequi praesentium eos voluptatibus minima explicabo.</p>
+                </div>
+            </div>
+        <!-- </a> -->
+    </template>
+
+
+    <script src="/Project-12_NewsWebsite/script.js"></script>
+</body>
+
+</html>
