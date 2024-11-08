@@ -37,8 +37,8 @@ let fetchNews = async(newsName)=>{
     console.log("kk",data.articles[0].content);
 
     bindData(data.articles) 
- }catch(){
-  alert('Error:Requests from the browser are not allowed on the Developer plan, except from localhost')
+ }catch(err){
+  alert(err);
  }
 }
 //  fetchNews("cricket"); //📗🔖Learning 2.1 TILL NOW I USED THIS.📗🔖 we want just after load page this function runs. so two ways to do it. 1st  directly call and 2nd pass this function to window.addEventListner('load', fetchNews())
