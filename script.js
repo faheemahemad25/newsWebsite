@@ -18,7 +18,9 @@ const url = "https://newsapi.org/v2/everything?q="; // or till now i used to use
 //? });
 
 let fetchNews = async(newsName)=>{
-    //?  const res = await fetch(`https://newsapi.org/v2/everything?q=${newsName}&apiKey=0e58328b414a4920bdfa50cbb282474b`);
+ try{
+  
+ //?  const res = await fetch(`https://newsapi.org/v2/everything?q=${newsName}&apiKey=0e58328b414a4920bdfa50cbb282474b`);
      
     const res = await fetch(`${url}${newsName}&apiKey=${API_KEY}`); //📗🔖Learning 1 or till now i used this above syntax of API
     const data = await res.json();
@@ -35,6 +37,9 @@ let fetchNews = async(newsName)=>{
     console.log("kk",data.articles[0].content);
 
     bindData(data.articles) 
+ }catch(){
+  alert('Error:Requests from the browser are not allowed on the Developer plan, except from localhost')
+ }
 }
 //  fetchNews("cricket"); //📗🔖Learning 2.1 TILL NOW I USED THIS.📗🔖 we want just after load page this function runs. so two ways to do it. 1st  directly call and 2nd pass this function to window.addEventListner('load', fetchNews())
 
