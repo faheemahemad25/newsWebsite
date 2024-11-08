@@ -38,7 +38,7 @@ let fetchNews = async(newsName)=>{
 
     bindData(data.articles) 
  }catch(err){
-  alert(err);
+  console.log(err);
   alert('⚠️ Requests from the browser are not allowed on the Developer plan, except from localhost');
  }
 }
