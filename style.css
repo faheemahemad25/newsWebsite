@@ -190,7 +190,7 @@ main{
 
  /* vertical style  */
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
 
     .main-nav{
         display: flex;
@@ -203,9 +203,18 @@ main{
         display: flex;
         flex-wrap: wrap;
     }
-    .news-input{
+    
+    .search-bar {
         width: 100%;
+        /* display: grid;
+        grid-template-columns: 6fr 4fr; */
+        margin-bottom: 1rem;
     }
-
+    .news-input{
+        width: 60%;
+    }
+    .search-button{
+        width: 35%;
+    }
 }
 
