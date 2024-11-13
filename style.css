@@ -197,11 +197,13 @@ main{
         flex-wrap: wrap;
     }
     .nav-links{
+        width: 100%;
         margin-bottom: 0.5rem;
+        overflow:auto;
     }
     #nav-links-input{
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
     
     .search-bar {
@@ -217,4 +219,3 @@ main{
         width: 35%;
     }
 }
-
