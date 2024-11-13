@@ -184,4 +184,28 @@ main{
     margin-block: 12px; /* 🔖📗 */
 }
 
+/* ======================================================================================
+                                    media query
+ ===================================================================================== */
+
+ /* vertical style  */
+
+@media (max-width: 450px) {
+
+    .main-nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav-links{
+        margin-bottom: 0.5rem;
+    }
+    #nav-links-input{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .news-input{
+        width: 100%;
+    }
+
+}
 
